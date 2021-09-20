@@ -32,7 +32,7 @@ jobs:
         run: yarn -s setup
 
       - name: Format files
-        run: yarn -s prettier \"**/*.js\" --check && yarn -s prettier \"**/*.{md,css,scss,yaml,yml}\" --check
+        run: yarn -s prettier "**/*.js" --check && yarn -s prettier "**/*.{md,css,scss,yaml,yml}" --check
 
       - name: Lint files
         run: yarn -s lint
