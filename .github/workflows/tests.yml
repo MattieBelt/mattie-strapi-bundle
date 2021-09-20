@@ -1,0 +1,43 @@
+name: 'Tests'
+
+on:
+  push:
+  pull_request:
+    branches:
+      - master
+
+jobs:
+  tests:
+    name: 'All tests (node: v${{ matrix.node }})'
+    runs-on: ubuntu-latest
+    env:
+      CODECOV_TOKEN: ${{ secrets.codecov }}
+    strategy:
+      matrix:
+        node: [12, 14, 16]
+    steps:
+      - name: Checkout repo
+        uses: actions/checkout@v2
+
+      - name: Setup cache
+        uses: actions/cache@v2
+        with:
+          path: '**/node_modules'
+          key: ${{ runner.os }}-modules-${{ hashFiles('**/yarn.lock') }}
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v2
+        with:
+          node-version: ${{ matrix.node }}
+
+      - name: Setup packages
+        run: yarn -s setup
+
+      - name: Format files
+        run: yarn -s prettier \"**/*.js\" --check && yarn -s prettier \"**/*.{md,css,scss,yaml,yml}\" --check
+
+      - name: Lint files
+        run: yarn -s lint
+
+      - name: Run unit tests
+        run: yarn -s test
