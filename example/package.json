@@ -1,5 +1,6 @@
 {
   "name": "mattie-strapi-bundle-example",
+  "version": "0.1.0",
   "private": true,
   "description": "A Strapi example application for the mattie-strapi-bundle",
   "scripts": {
@@ -9,15 +10,15 @@
     "strapi": "strapi"
   },
   "dependencies": {
-    "@strapi/strapi": "4.0.0-next.11",
     "@strapi/admin": "4.0.0-next.11",
-    "@strapi/utils": "4.0.0-next.11",
     "@strapi/plugin-content-type-builder": "4.0.0-next.11",
     "@strapi/plugin-content-manager": "4.0.0-next.11",
-    "@strapi/plugin-users-permissions": "4.0.0-next.11",
     "@strapi/plugin-email": "4.0.0-next.11",
-    "@strapi/plugin-upload": "4.0.0-next.11",
     "@strapi/plugin-i18n": "4.0.0-next.11",
+    "@strapi/plugin-upload": "4.0.0-next.11",
+    "@strapi/plugin-users-permissions": "4.0.0-next.11",
+    "@strapi/strapi": "4.0.0-next.11",
+    "@strapi/utils": "4.0.0-next.11",
     "sqlite3": "5.0.2",
     "strapi-plugin-search": "./packages/search/strapi-plugin-search"
   },
