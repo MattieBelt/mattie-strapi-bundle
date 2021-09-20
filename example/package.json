@@ -1,0 +1,37 @@
+{
+  "name": "mattie-strapi-bundle-example",
+  "private": true,
+  "description": "A Strapi example application for the mattie-strapi-bundle",
+  "scripts": {
+    "develop": "strapi develop",
+    "start": "strapi start",
+    "build": "strapi build",
+    "strapi": "strapi"
+  },
+  "dependencies": {
+    "@strapi/strapi": "4.0.0-next.11",
+    "@strapi/admin": "4.0.0-next.11",
+    "@strapi/utils": "4.0.0-next.11",
+    "@strapi/plugin-content-type-builder": "4.0.0-next.11",
+    "@strapi/plugin-content-manager": "4.0.0-next.11",
+    "@strapi/plugin-users-permissions": "4.0.0-next.11",
+    "@strapi/plugin-email": "4.0.0-next.11",
+    "@strapi/plugin-upload": "4.0.0-next.11",
+    "@strapi/plugin-i18n": "4.0.0-next.11",
+    "sqlite3": "5.0.2",
+    "strapi-plugin-search": "./packages/search/strapi-plugin-search"
+  },
+  "author": {
+    "name": "Mattias van den Belt",
+    "email": "mattiebelt@gmail.com",
+    "url": "https://github.com/MattieBelt"
+  },
+  "strapi": {
+    "uuid": "5a3ccf76-918e-430e-93ea-eedce04e058d"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "MIT"
+}

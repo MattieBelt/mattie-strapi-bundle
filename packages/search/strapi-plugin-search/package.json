@@ -1,0 +1,32 @@
+{
+  "name": "strapi-plugin-search",
+  "version": "0.1.0",
+  "description": "Index managed content on Strapi to a search service.",
+  "strapi": {
+    "displayName": "Search",
+    "name": "search",
+    "icon": "plug",
+    "description": "search.plugin.description",
+    "kind": "plugin"
+  },
+  "peerDependencies": {
+    "@strapi/strapi": "4.0.0-next.11"
+  },
+  "homepage": "https://strapi-plugin-search.mattiebelt.com",
+  "repository": {
+    "type": "git",
+    "url": "github:MattieBelt/mattie-strapi-bundle",
+    "directory": "packages/search/strapi-plugin-search"
+  },
+  "bugs": "https://github.com/MattieBelt/mattie-strapi-bundle/issues",
+  "author": {
+    "name": "Mattias Belt, van den",
+    "email": "mattiebelt@gmail.com",
+    "url": "https://github.com/MattieBelt"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}

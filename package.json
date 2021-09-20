@@ -1,0 +1,66 @@
+{
+  "name": "mattie-strapi-bundle",
+  "private": true,
+  "description": "Mono repo for the mattie-strapi-bundle",
+  "workspaces": [
+    "packages/*",
+    "packages/*/*",
+    "example"
+  ],
+  "scripts": {
+    "setup": "yarn && yarn build",
+    "build": "lerna run --stream build",
+    "develop": "yarn --cwd example develop",
+    "console": "yarn --cwd example strapi console",
+    "start": "yarn --cwd example start",
+    "lint": "eslint .",
+    "format": "npm-run-all -p format:*",
+    "format:code": "yarn prettier \"**/*.js\" --write",
+    "format:other": "yarn prettier \"**/*.{md,css,scss,yaml,yml}\" --write",
+    "test": "yarn test:unit",
+    "test:unit": "jest --forceExit"
+  },
+  "devDependencies": {
+    "@babel/core": "^7.15.0",
+    "@babel/eslint-parser": "^7.15.0",
+    "@strapi/strapi": "4.0.0-next.11",
+    "eslint": "^7.32.0",
+    "eslint-config-airbnb": "^18.2.1",
+    "eslint-config-airbnb-base": "^14.2.1",
+    "eslint-config-prettier": "^6.15.0",
+    "eslint-plugin-import": "^2.22.1",
+    "eslint-plugin-jsdoc": "^35.4.0",
+    "eslint-plugin-jsx-a11y": "^6.4.1",
+    "eslint-plugin-node": "^11.1.0",
+    "eslint-plugin-react": "^7.23.2",
+    "eslint-plugin-react-hooks": "^4.2.0",
+    "eslint-plugin-redux-saga": "^1.2.1",
+    "jest": "^27.0.6",
+    "lerna": "^4.0.0",
+    "lint-staged": "^10.5.4",
+    "npm-run-all": "^4.1.5",
+    "prettier": "^1.18.2",
+    "supertest": "^6.1.3"
+  },
+  "author": {
+    "name": "Mattias van den Belt",
+    "email": "mattiebelt@gmail.com",
+    "url": "https://github.com/MattieBelt"
+  },
+  "homepage": "https://github.com/MattieBelt/mattie-strapi-bundle",
+  "repository": "github:MattieBelt/mattie-strapi-bundle",
+  "bugs": "https://github.com/MattieBelt/mattie-strapi-bundle/issues",
+  "lint-staged": {
+    "*.{js,md,css,scss,yaml,yml}": [
+      "prettier --write"
+    ],
+    "*.js": [
+      "eslint --fix"
+    ]
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
