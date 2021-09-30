@@ -11,7 +11,7 @@
   },
   "dependencies": {
     "@strapi/strapi": "4.0.0-beta.0",
-    "@strapi/plugin-users-permissions": "4.0.0-beta.0",
+    "@strapi/plugin-users-permissions": "4.0.0-next.0",
     "@strapi/plugin-i18n": "4.0.0-beta.0",
     "sqlite3": "5.0.2",
     "strapi-plugin-search": "./packages/search/strapi-plugin-search"
