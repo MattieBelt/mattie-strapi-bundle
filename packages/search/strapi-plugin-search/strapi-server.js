@@ -2,8 +2,6 @@
 
 const bootstrap = require('./server/bootstrap');
 const config = require('./server/config');
-const controllers = require('./server/controllers');
-const routes = require('./server/routes');
 const services = require('./server/services');
 
 /**
@@ -12,7 +10,5 @@ const services = require('./server/services');
 module.exports = () => ({
   bootstrap,
   config,
-  controllers,
-  routes,
   services,
 });

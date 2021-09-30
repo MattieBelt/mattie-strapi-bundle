@@ -1,32 +1,32 @@
 {
-  "name": "strapi-plugin-search",
+  "name": "strapi-provider-search-algolia",
   "version": "0.1.0",
-  "description": "Index managed content on Strapi to a search service.",
+  "description": "Algolia provider for strapi search plugin",
   "strapi": {
-    "displayName": "Search",
-    "name": "search",
-    "icon": "plug",
-    "description": "search.plugin.description",
-    "kind": "plugin"
+    "isProvider": true
   },
+  "directories": {
+    "lib": "./lib"
+  },
+  "main": "./lib",
   "dependencies": {
-    "lodash": "^4.17.21"
+    "algoliasearch": "^4.9.1"
   },
   "peerDependencies": {
-    "@strapi/strapi": "4.0.0-beta.0",
-    "@strapi/utils": "4.0.0-beta.0"
+    "strapi-plugin-search": "*"
   },
   "keywords": [
+    "algolia",
+    "algoliasearch",
     "strapi",
-    "plugin",
     "search",
-    "service"
+    "provider"
   ],
   "homepage": "https://strapi-plugin-search.mattiebelt.com",
   "repository": {
     "type": "git",
     "url": "github:MattieBelt/mattie-strapi-bundle",
-    "directory": "packages/search/strapi-plugin-search"
+    "directory": "packages/search/strapi-provider-search-algolia"
   },
   "bugs": "https://github.com/MattieBelt/mattie-strapi-bundle/issues",
   "author": {
