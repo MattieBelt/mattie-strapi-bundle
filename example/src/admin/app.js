@@ -1,6 +1,8 @@
 'use strict';
 
 export default {
-  config: {},
+  config: {
+    locales: ['fr'],
+  },
   bootstrap() {},
 };

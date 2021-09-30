@@ -1,15 +1,16 @@
 'use strict';
 
+const path = require('path');
+
 module.exports = ({ env }) => {
   const connections = {
     sqlite: {
       client: 'sqlite',
       connection: {
-        filename: env('DATABASE_FILE', '.tmp/data.db'),
+        filename: path.join(__dirname, '..', env('DATABASE_FILENAME', './.tmp/data.db')),
       },
       useNullAsDefault: true,
     },
-
     postgres: {
       client: 'postgres',
       connection: {
@@ -20,7 +21,6 @@ module.exports = ({ env }) => {
         host: 'localhost',
       },
     },
-
     mysql: {
       client: 'mysql',
       connection: {
