@@ -1,0 +1,74 @@
+{
+  "kind": "collectionType",
+  "collectionName": "episodes",
+  "info": {
+    "singularName": "episode",
+    "pluralName": "episodes",
+    "displayName": "Episode",
+    "name": "Episode",
+    "description": ""
+  },
+  "options": {
+    "draftAndPublish": true
+  },
+  "pluginOptions": {},
+  "attributes": {
+    "title": {
+      "type": "string",
+      "required": true
+    },
+    "subtitle": {
+      "type": "string"
+    },
+    "description": {
+      "type": "text"
+    },
+    "showNotes": {
+      "type": "richtext"
+    },
+    "internalNotes": {
+      "type": "richtext",
+      "private": true
+    },
+    "file": {
+      "type": "media",
+      "multiple": false,
+      "required": true,
+      "allowedTypes": [
+        "files",
+        "videos"
+      ]
+    },
+    "duration": {
+      "type": "time",
+      "required": true
+    },
+    "type": {
+      "type": "enumeration",
+      "enum": [
+        "FULL",
+        "TRAILER"
+      ]
+    },
+    "keywords": {
+      "type": "string"
+    },
+    "podcast": {
+      "type": "relation",
+      "relation": "manyToOne",
+      "target": "api::podcast.podcast",
+      "inversedBy": "episodes"
+    },
+    "hosts": {
+      "type": "relation",
+      "relation": "manyToMany",
+      "target": "api::person.person",
+      "inversedBy": "hostedEpisodes"
+    },
+    "guests": {
+      "type": "relation",
+      "relation": "oneToMany",
+      "target": "api::person.person"
+    }
+  }
+}
