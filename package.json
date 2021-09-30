@@ -8,7 +8,7 @@
     "example"
   ],
   "scripts": {
-    "setup": "yarn && yarn build",
+    "setup": "yarn && yarn lerna bootstrap",
     "build": "lerna run --stream build",
     "develop": "yarn --cwd example develop",
     "console": "yarn --cwd example strapi console",
@@ -17,13 +17,13 @@
     "format": "npm-run-all -p format:*",
     "format:code": "yarn prettier \"**/*.js\" --write",
     "format:other": "yarn prettier \"**/*.{md,css,scss,yaml,yml}\" --write",
-    "test": "yarn test:unit",
+    "test": "DATABASE_FILENAME='.tmp/test.db' yarn test:unit",
     "test:unit": "jest --forceExit"
   },
   "devDependencies": {
     "@babel/core": "^7.15.0",
     "@babel/eslint-parser": "^7.15.0",
-    "@strapi/strapi": "4.0.0-next.11",
+    "@strapi/strapi": "4.0.0-beta.0",
     "eslint": "^7.32.0",
     "eslint-config-airbnb": "^18.2.1",
     "eslint-config-airbnb-base": "^14.2.1",
