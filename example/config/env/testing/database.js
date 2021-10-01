@@ -9,5 +9,5 @@ module.exports = {
       filename: path.join(__dirname, '../../..', './.tmp/test.db'),
     },
     useNullAsDefault: true,
-  }
+  },
 };

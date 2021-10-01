@@ -44,13 +44,13 @@ module.exports = () => ({
             },
 
             // Todo: Fix `afterCreateMany` event result only has an count, it doesn't provide an array of result objects.
-            async afterCreateMany(event) {
-              const { result } = event;
-              await provider.createMany({
-                indexName,
-                data: result.map((entity) => ({ ...sanitize(entity), id: idPrefix + entity.id })),
-              });
-            },
+            // async afterCreateMany(event) {
+            //   const { result } = event;
+            //   await provider.createMany({
+            //     indexName,
+            //     data: result.map((entity) => ({ ...sanitize(entity), id: idPrefix + entity.id })),
+            //   });
+            // },
 
             async afterUpdate(event) {
               const { result } = event;
@@ -62,13 +62,13 @@ module.exports = () => ({
             },
 
             // Todo: Fix `afterUpdateMany` event result only has an count, it doesn't provide an array of result objects.
-            async afterUpdateMany(event) {
-              const { result } = event;
-              await provider.updateMany({
-                indexName,
-                data: result.map((entity) => ({ ...sanitize(entity), id: idPrefix + entity.id })),
-              });
-            },
+            // async afterUpdateMany(event) {
+            //   const { result } = event;
+            //   await provider.updateMany({
+            //     indexName,
+            //     data: result.map((entity) => ({ ...sanitize(entity), id: idPrefix + entity.id })),
+            //   });
+            // },
 
             async afterDelete(event) {
               const { result } = event;
@@ -77,13 +77,13 @@ module.exports = () => ({
 
             // Todo: Fix `afterDeleteMany` lifecycle not correctly triggered in `em.deleteMany()`, it also doesn't provide an array of result objects.
             // https://github.com/strapi/strapi/blob/a4c27836b481210d93acf932b7edd2ec1350d070/packages/core/database/lib/entity-manager.js#L325-L340
-            async afterDeleteMany(event) {
-              const { result } = event;
-              await provider.deleteMany({
-                indexName,
-                ids: result.map((entity) => idPrefix + entity.id),
-              });
-            },
+            // async afterDeleteMany(event) {
+            //   const { result } = event;
+            //   await provider.deleteMany({
+            //     indexName,
+            //     ids: result.map((entity) => idPrefix + entity.id),
+            //   });
+            // },
           });
         } else {
           strapi.log.error(`Search plugin bootstrap failed. Search plugin could not load lifecycles on model '${name}'`);

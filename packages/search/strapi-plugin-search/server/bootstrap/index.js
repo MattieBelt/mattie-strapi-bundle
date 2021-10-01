@@ -16,12 +16,10 @@ module.exports = async () => {
     await search.service('provider').loadProvider();
 
     // Todo: use store to save plugin config.
-    if (!(await store.get({ key: 'config' }))) {
-      await store.set({
-        key: 'config',
-        value: {},
-      });
-    }
+    await store.set({
+      key: 'config',
+      value: {},
+    });
 
     await search.service('lifecycle').loadLifecycleMethods();
   } catch (error) {

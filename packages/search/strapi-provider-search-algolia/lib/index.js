@@ -32,7 +32,7 @@ module.exports = {
 
     const client = algoliasearch(applicationId, apiKey);
 
-    await client.getApiKey(apiKey).catch((error) => {
+    await client.getApiKey(apiKey, { timeout: 2000 }).catch((error) => {
       throw new Error(`Algolia provider could not initialize: ${error.message}`);
     });
 
@@ -109,13 +109,7 @@ module.exports = {
        * @returns {Promise<algoliasearch.ChunkedBatchResponse>} - Promise with chunked task
        */
       createMany({ indexName, data }) {
-        data = data.map((entry) => {
-          if (entry.data) {
-            return { objectID: entry.id || entry.data.id, ...entry.data };
-          } else {
-            return { objectID: entry.id, ...entry };
-          }
-        });
+        data = data.map((entry) => ({ objectID: entry.id, ...entry }));
 
         return client
           .initIndex(indexName)
@@ -135,13 +129,7 @@ module.exports = {
        * @returns {Promise<algoliasearch.ChunkedBatchResponse>} - Promise with chunked task
        */
       updateMany({ indexName, data }) {
-        data = data.map((entry) => {
-          if (entry.data) {
-            return { objectID: entry.id || entry.data.id, ...entry.data };
-          } else {
-            return { objectID: entry.id, ...entry };
-          }
-        });
+        data = data.map((entry) => ({ objectID: entry.id, ...entry }));
 
         return client
           .initIndex(indexName)

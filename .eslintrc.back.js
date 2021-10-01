@@ -25,7 +25,7 @@ module.exports = {
     quotes: ['error', 'single'],
     semi: ['error', 'always'],
     'object-curly-spacing': ['error', 'always'],
-    'prefer-const': 'error',
+    'prefer-const': ['error', { destructuring: 'all' }],
     'no-var': 'error',
     'dot-notation': 'error',
     eqeqeq: 'error',

@@ -48,7 +48,8 @@
       "enum": [
         "FULL",
         "TRAILER"
-      ]
+      ],
+      "default": "FULL"
     },
     "keywords": {
       "type": "string"
