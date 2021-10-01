@@ -18,7 +18,7 @@ module.exports = {
    * Initiates the algolia search provider
    *
    * @param {object} pluginConfig - Plugin configuration
-   * @returns {Provider} - Algolia search provider
+   * @returns {Provider} Algolia search provider
    */
   async init(pluginConfig) {
     const {
@@ -27,12 +27,12 @@ module.exports = {
     } = pluginConfig;
 
     if (!applicationId.length || !apiKey.length) {
-      throw new Error('Algolia provider could not initialize: applicationId and apiKey must be defined');
+      throw new Error('Algolia provider could not initialize: `applicationId` and `apiKey` must be defined on `providerOptions`.');
     }
 
     const client = algoliasearch(applicationId, apiKey);
 
-    await client.getApiKey(apiKey, { timeout: 2000 }).catch((error) => {
+    await client.getApiKey(apiKey, { timeout: 3000 }).catch((error) => {
       throw new Error(`Algolia provider could not initialize: ${error.message}`);
     });
 
@@ -45,13 +45,13 @@ module.exports = {
       client,
 
       /**
-       * Creates the entity in the index
+       * Creates the entity on a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {object} params.data - Data of the to be created entry
        * @param {string} [params.id] - Id used for identification of the entry
-       * @returns {Promise<algoliasearch.SaveObjectResponse>} - Promise with save task
+       * @returns {Promise<algoliasearch.SaveObjectResponse>} Promise with save task
        */
       create({ indexName, data, id }) {
         return client
@@ -64,13 +64,13 @@ module.exports = {
       },
 
       /**
-       * Updates the entity in the index
+       * Updates the entity on a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {object} params.data - Data of the to be updated entry
        * @param {string} [params.id] - Id used for identification of the entry
-       * @returns {Promise<algoliasearch.PartialUpdateObjectResponse>} - Promise with update task
+       * @returns {Promise<algoliasearch.PartialUpdateObjectResponse>} Promise with update task
        */
       update({ indexName, data, id }) {
         return client
@@ -83,12 +83,12 @@ module.exports = {
       },
 
       /**
-       * Deletes the entity in the index
+       * Deletes the entity from a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {string} params.id - Id used for identification of the entry
-       * @returns {Promise<algoliasearch.DeleteResponse>} - Promise with delete task
+       * @returns {Promise<algoliasearch.DeleteResponse>} Promise with delete task
        */
       delete({ indexName, id }) {
         return client
@@ -101,12 +101,12 @@ module.exports = {
       },
 
       /**
-       * Creates multiple entities in the index
+       * Creates multiple entities on a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {Array<{data: object, id: string|undefined}>} params.data - Data of the to be created entries
-       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} - Promise with chunked task
+       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} Promise with chunked task
        */
       createMany({ indexName, data }) {
         data = data.map((entry) => ({ objectID: entry.id, ...entry }));
@@ -121,12 +121,12 @@ module.exports = {
       },
 
       /**
-       * Updates multiple entities in the index
+       * Updates multiple entities on a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {Array<{data: object, id: string|undefined}>} params.data - Data of the to be updated entries
-       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} - Promise with chunked task
+       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} Promise with chunked task
        */
       updateMany({ indexName, data }) {
         data = data.map((entry) => ({ objectID: entry.id, ...entry }));
@@ -141,12 +141,12 @@ module.exports = {
       },
 
       /**
-       * Deletes multiple entities in the index
+       * Deletes multiple entities from a index
        *
        * @param {object} params - Paramaters
        * @param {string} params.indexName - Name of the index
        * @param {Array<string>} params.ids - Ids used for identification of the entries
-       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} - Promise with chunked task
+       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} Promise with chunked task
        */
       deleteMany({ indexName, ids }) {
         return client

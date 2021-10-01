@@ -6,7 +6,7 @@ const { validateProvider, PROVIDER_METHODS } = require('../utils/validate');
 /**
  * Gets provider service
  *
- * @returns {object} - Provider service
+ * @returns {object} Provider service
  */
 module.exports = () => ({
   /**
@@ -15,7 +15,7 @@ module.exports = () => ({
    * @param {object} pluginConfig - Plugin configuration
    * @param {string} [pluginConfig.provider] - Provider name
    * @param {object} [pluginConfig.instance] - Provider instance
-   * @param {Function} pluginConfig.instance.init - Initiation of provider instance
+   * @param {Function} pluginConfig.instance.init - Initiation function of provider instance
    */
   async loadProvider(pluginConfig) {
     pluginConfig = pluginConfig ? pluginConfig : strapi.config.get('plugin.search');

@@ -4,7 +4,7 @@ module.exports = {
   /**
    * Initiates the mock search provider
    *
-   * @returns {object} - Mock search provider
+   * @returns {object} Mock search provider
    */
   init() {
     return {

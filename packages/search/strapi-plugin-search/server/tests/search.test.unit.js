@@ -85,7 +85,7 @@ describe('Search plugin', function() {
     ).toThrow();
   });
 
-  it('Should throw a wrapped error', () => {
+  it('Should throw a wrapped Error with Strapi logger', () => {
     strapi.log.error = jest.fn();
     wrapMethodWithError(() => {
       throw new Error('Inner error');

@@ -5,7 +5,7 @@ const { omit, pick } = require('lodash/fp');
 /**
  * Gets lifecycle service
  *
- * @returns {object} - Lifecycle service
+ * @returns {object} Lifecycle service
  */
 module.exports = () => ({
   /**
@@ -35,11 +35,10 @@ module.exports = () => ({
             models: [name],
 
             async afterCreate(event) {
-              const { result } = event;
-              await provider.create({
+              provider.create({
                 indexName,
-                data: sanitize(result),
-                id: idPrefix + result.id,
+                data: sanitize(event.result),
+                id: idPrefix + event.result.id,
               });
             },
 
@@ -53,11 +52,10 @@ module.exports = () => ({
             // },
 
             async afterUpdate(event) {
-              const { result } = event;
-              await provider.update({
+              provider.update({
                 indexName,
-                data: sanitize(result),
-                id: idPrefix + result.id,
+                data: sanitize(event.result),
+                id: idPrefix + event.result.id,
               });
             },
 
@@ -71,8 +69,7 @@ module.exports = () => ({
             // },
 
             async afterDelete(event) {
-              const { result } = event;
-              await provider.delete({ indexName, id: idPrefix + result.id });
+              provider.delete({ indexName, id: idPrefix + event.result.id });
             },
 
             // Todo: Fix `afterDeleteMany` lifecycle not correctly triggered in `em.deleteMany()`, it also doesn't provide an array of result objects.
@@ -86,7 +83,7 @@ module.exports = () => ({
             // },
           });
         } else {
-          strapi.log.error(`Search plugin bootstrap failed. Search plugin could not load lifecycles on model '${name}'`);
+          strapi.log.error(`Search plugin bootstrap failed: Search plugin could not load lifecycles on model '${name}' as it doesn't exist.`);
         }
       });
   },

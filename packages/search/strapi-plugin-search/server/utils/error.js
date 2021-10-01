@@ -1,7 +1,7 @@
 'use strict';
 
 /**
- * Wraps function with search plugin error message.
+ * Wraps function with search plugin error message for strapi logger.
  *
  * @param {Function} fn - Function
  * @returns {Function} Function wrapped with Search plugin error message
