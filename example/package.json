@@ -1,6 +1,6 @@
 {
   "name": "@mattie-bundle/mattie-strapi-bundle-example",
-  "private": true,
+  "version": "1.0.0-alpha.0",
   "description": "A Strapi example application for the mattie-strapi-bundle",
   "scripts": {
     "develop": "strapi develop",
@@ -13,8 +13,8 @@
     "@strapi/plugin-users-permissions": "4.0.0-beta.0",
     "@strapi/plugin-i18n": "4.0.0-beta.0",
     "sqlite3": "5.0.2",
-    "strapi-plugin-search": "*",
-    "strapi-provider-search-algolia": "*"
+    "@mattie-bundle/strapi-plugin-search": "1.0.0-alpha.0",
+    "@mattie-bundle/strapi-provider-search-algolia": "1.0.0-alpha.0"
   },
   "author": {
     "name": "Mattias van den Belt",
