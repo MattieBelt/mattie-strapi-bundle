@@ -1,5 +1,5 @@
 {
-  "name": "strapi-plugin-search",
+  "name": "@mattie-bundle/strapi-plugin-search",
   "version": "0.1.0",
   "description": "Index managed content on Strapi to a search service.",
   "strapi": {

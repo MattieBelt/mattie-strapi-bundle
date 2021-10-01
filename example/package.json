@@ -1,6 +1,5 @@
 {
-  "name": "mattie-strapi-bundle-example",
-  "version": "0.1.0",
+  "name": "@mattie-bundle/mattie-strapi-bundle-example",
   "private": true,
   "description": "A Strapi example application for the mattie-strapi-bundle",
   "scripts": {
