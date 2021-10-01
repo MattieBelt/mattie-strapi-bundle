@@ -49,36 +49,40 @@ describe('Search plugin', function() {
   test('Plugin config validation', () => {
     expect(() => validateConfig({})).toThrow('Search plugin ConfigValidationError: provider is a required field');
 
-    expect(() => validateConfig({
-      provider: 'string',
-      providerOptions: true,
-    })).toThrow();
+    expect(() =>
+      validateConfig({
+        provider: 'string',
+        providerOptions: true,
+      }),
+    ).toThrow();
 
-    expect(() => validateConfig({
-      provider: 'string',
-      excludedFields: false,
-    })).toThrow();
+    expect(() =>
+      validateConfig({
+        provider: 'string',
+        excludedFields: false,
+      }),
+    ).toThrow();
 
-    expect(() => validateConfig({
-      provider: 'string',
-      contentTypes: [
-        'api::contentType.contentType',
-      ],
-    })).toThrow('Search plugin ConfigValidationError: contentTypes[0] must be a `object` type');
+    expect(() =>
+      validateConfig({
+        provider: 'string',
+        contentTypes: ['api::contentType.contentType'],
+      }),
+    ).toThrow('Search plugin ConfigValidationError: contentTypes[0] must be a `object` type');
 
-    expect(() => validateConfig({
-      provider: 'string',
-      contentTypes: [
-        {},
-      ],
-    })).toThrow('Search plugin ConfigValidationError: contentTypes[0].name is a required field');
+    expect(() =>
+      validateConfig({
+        provider: 'string',
+        contentTypes: [{}],
+      }),
+    ).toThrow('Search plugin ConfigValidationError: contentTypes[0].name is a required field');
 
-    expect(() => validateConfig({
-      provider: 'string',
-      contentTypes: [
-        { name: 'api::contentType.contentType', fields: false },
-      ],
-    })).toThrow();
+    expect(() =>
+      validateConfig({
+        provider: 'string',
+        contentTypes: [{ name: 'api::contentType.contentType', fields: false }],
+      }),
+    ).toThrow();
   });
 
   it('Should throw a wrapped error', () => {
@@ -88,6 +92,5 @@ describe('Search plugin', function() {
     })();
 
     expect(strapi.log.error).toHaveBeenCalledWith('Search plugin: Inner error');
-
   });
 });
