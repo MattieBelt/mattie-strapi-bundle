@@ -7,5 +7,6 @@ module.exports = {
   transform: {},
   setupFilesAfterEnv: ['<rootDir>/test/unit.setup.js'],
   collectCoverage: true,
-  collectCoverageFrom: ['packages/**/*.js'],
+  collectCoverageFrom: ['packages/**/*.js', 'example/**/*.js'],
+  coveragePathIgnorePatterns: ['build', '.cache'],
 };

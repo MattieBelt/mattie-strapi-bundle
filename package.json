@@ -10,9 +10,9 @@
   "scripts": {
     "setup": "yarn && yarn lerna bootstrap",
     "build": "lerna run --stream build",
-    "develop": "yarn --cwd example develop",
-    "console": "yarn --cwd example strapi console",
-    "start": "yarn --cwd example start",
+    "develop": "ENV_PATH=../.env yarn --cwd example develop",
+    "console": "ENV_PATH=../.env yarn --cwd example strapi console",
+    "start": "ENV_PATH=../.env yarn --cwd example start",
     "lint": "eslint .",
     "format": "npm-run-all -p format:*",
     "format:code": "yarn prettier \"**/*.js\" --write",

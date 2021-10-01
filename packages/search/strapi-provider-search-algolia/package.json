@@ -13,7 +13,7 @@
     "algoliasearch": "^4.9.1"
   },
   "peerDependencies": {
-    "strapi-plugin-search": "*"
+    "strapi-plugin-search": "0.1.0"
   },
   "keywords": [
     "algolia",
