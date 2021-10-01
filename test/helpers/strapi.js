@@ -13,7 +13,7 @@ const createStrapiInstance = async () => {
 
   await instance.load();
 
-  instance.log.level = 'fatal';
+  instance.log.level = 1;
 
   instance.server.mount();
 

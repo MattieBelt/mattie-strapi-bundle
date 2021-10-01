@@ -1,0 +1,14 @@
+comment:
+  branches:
+    - master
+
+coverage:
+  status:
+    project:
+      default:
+        target: 90%
+        threshold: 10%
+    patch:
+      default:
+        target: 95%
+        threshold: 5%

@@ -10,14 +10,14 @@
   "scripts": {
     "setup": "yarn && yarn lerna bootstrap",
     "build": "lerna run --stream build",
-    "develop": "yarn --cwd example develop",
-    "console": "yarn --cwd example strapi console",
-    "start": "yarn --cwd example start",
+    "develop": "ENV_PATH=../.env yarn --cwd example develop",
+    "console": "ENV_PATH=../.env yarn --cwd example strapi console",
+    "start": "ENV_PATH=../.env yarn --cwd example start",
     "lint": "eslint .",
     "format": "npm-run-all -p format:*",
     "format:code": "yarn prettier \"**/*.js\" --write",
     "format:other": "yarn prettier \"**/*.{md,css,scss,yaml,yml}\" --write",
-    "test": "DATABASE_FILENAME='.tmp/test.db' yarn test:unit",
+    "test": "NODE_ENV=testing yarn test:unit",
     "test:unit": "jest --forceExit"
   },
   "devDependencies": {
@@ -59,7 +59,7 @@
     ]
   },
   "engines": {
-    "node": ">=12.x.x <=16.x.x",
+    "node": ">=12.9.x <=16.x.x",
     "npm": ">=6.0.0"
   },
   "license": "SEE LICENSE IN LICENSE"
