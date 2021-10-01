@@ -1,6 +1,7 @@
 'use strict';
 
-const { PROVIDER_METHODS } = require('../utils/validate');
+const { PROVIDER_METHODS, validateConfig } = require('../utils/validate');
+const { wrapMethodWithError } = require('../utils/error');
 const { categories, episode } = require('./__mocks__/data');
 
 describe('Search plugin', function() {
@@ -43,5 +44,50 @@ describe('Search plugin', function() {
           instance: require('./__mocks__/provider').init(),
         }),
     ).rejects.toThrow();
+  });
+
+  test('Plugin config validation', () => {
+    expect(() => validateConfig({})).toThrow('Search plugin ConfigValidationError: provider is a required field');
+
+    expect(() => validateConfig({
+      provider: 'string',
+      providerOptions: true,
+    })).toThrow();
+
+    expect(() => validateConfig({
+      provider: 'string',
+      excludedFields: false,
+    })).toThrow();
+
+    expect(() => validateConfig({
+      provider: 'string',
+      contentTypes: [
+        'api::contentType.contentType',
+      ],
+    })).toThrow('Search plugin ConfigValidationError: contentTypes[0] must be a `object` type');
+
+    expect(() => validateConfig({
+      provider: 'string',
+      contentTypes: [
+        {},
+      ],
+    })).toThrow('Search plugin ConfigValidationError: contentTypes[0].name is a required field');
+
+    expect(() => validateConfig({
+      provider: 'string',
+      contentTypes: [
+        { name: 'api::contentType.contentType', fields: false },
+      ],
+    })).toThrow();
+  });
+
+  it('Should throw a wrapped error', () => {
+    strapi.log.error = jest.fn();
+    wrapMethodWithError(() => {
+      throw new Error('Inner error');
+    })();
+
+    expect(strapi.log.error).toHaveBeenCalledWith('Search plugin: Inner error');
+
   });
 });
