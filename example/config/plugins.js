@@ -6,7 +6,7 @@ module.exports = ({ env }) => ({
     config: {
       provider: 'algolia',
       providerOptions: {
-        apiKey: env('ALGOLIA_PROVIDER_API_KEY'),
+        apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
         applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
       },
       prefix: `${env('NODE_ENV', 'development')}-example_`,
