@@ -17,7 +17,7 @@
     "format": "npm-run-all -p format:*",
     "format:code": "yarn prettier \"**/*.js\" --write",
     "format:other": "yarn prettier \"**/*.{md,css,scss,yaml,yml}\" --write",
-    "test": "DATABASE_FILENAME='.tmp/test.db' yarn test:unit",
+    "test": "NODE_ENV=testing yarn test:unit",
     "test:unit": "jest --forceExit"
   },
   "devDependencies": {
