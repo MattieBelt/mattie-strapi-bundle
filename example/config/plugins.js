@@ -2,7 +2,7 @@
 
 module.exports = ({ env }) => ({
   search: {
-    enabled: env.bool('ALGOLIA_PROVIDER', false),
+    enabled: env.bool('SEARCH_PLUGIN', false),
     config: {
       provider: 'algolia',
       providerOptions: {
