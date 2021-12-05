@@ -1,0 +1,29 @@
+{
+  "name": "mattie-strapi-bundle-docs",
+  "version": "1.0.0-alpha.1",
+  "private": true,
+  "description": "Documentation for the mattie-strapi-bundle",
+  "scripts": {
+    "dev": "nuxt",
+    "develop": "yarn dev",
+    "build": "nuxt build",
+    "start": "nuxt start",
+    "generate": "nuxt generate"
+  },
+  "dependencies": {
+    "@nuxt/content-theme-docs": "^0.11.1"
+  },
+  "devDependencies": {
+    "nuxt": "^2.15.8"
+  },
+  "author": {
+    "name": "Mattias van den Belt",
+    "email": "mattiebelt@gmail.com",
+    "url": "https://github.com/MattieBelt"
+  },
+  "engines": {
+    "node": ">=12.x.x <=16.x.x",
+    "npm": ">=6.0.0"
+  },
+  "license": "SEE LICENSE IN LICENSE"
+}
