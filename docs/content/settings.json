@@ -1,0 +1,12 @@
+{
+  "title": "Mattie Bundle for Strapi - docs",
+  "url": "mattie-bundle.mattiebelt.com",
+  "logo": {
+    "light": "/logo.svg",
+    "dark": "/logo.dark.svg"
+  },
+  "icon": "/icon.png",
+  "github": "MattieBelt/mattie-strapi-bundle",
+  "twitter": "@MattieBelt",
+  "defaultBranch": "master"
+}
