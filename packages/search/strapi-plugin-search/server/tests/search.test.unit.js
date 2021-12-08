@@ -4,7 +4,7 @@ const { PROVIDER_METHODS, validateConfig } = require('../utils/validate');
 const { wrapMethodWithError } = require('../utils/error');
 const { categories, episode } = require('./__mocks__/data');
 
-describe('Search plugin', function() {
+describe('Search plugin', function () {
   beforeAll(async () => {
     for (let [index, category] of categories.entries()) {
       category = await strapi.entityService.create('api::category.category', { data: category });

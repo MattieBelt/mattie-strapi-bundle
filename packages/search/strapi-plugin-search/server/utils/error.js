@@ -6,6 +6,7 @@
  * @param {Function} fn - Function
  * @returns {Function} Function wrapped with Search plugin error message
  */
+// prettier-ignore
 const wrapMethodWithError = (fn) => (...args) => {
   try {
     return fn(...args);
