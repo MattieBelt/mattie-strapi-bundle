@@ -1,5 +1,7 @@
 # strapi-plugin-search docs
 
+[mattie-bundle.mattiebelt.com](https://mattie-bundle.mattiebelt.com/)
+
 ## Setup
 
 ```bash
