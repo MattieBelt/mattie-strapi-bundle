@@ -11,7 +11,7 @@ features:
 <img src="/logo.svg" class="light-img" width="1280" height="800" alt="Strapi Search plugin"/>
 <img src="/logo.dark.svg" class="dark-img" width="1280" height="800" alt="Strapi Search plugin"/>
 
-This bundle brings easy-to-use extra features to the Strapi eco-system.
+This bundle brings extra easy-to-use features to the Strapi eco-system.
 
 <list :items="features"></list>
 
