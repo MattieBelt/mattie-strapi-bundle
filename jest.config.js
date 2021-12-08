@@ -5,6 +5,7 @@ module.exports = {
   testMatch: ['<rootDir>/**/?(*.)+(spec|test).unit.js'],
   modulePathIgnorePatterns: ['.cache'],
   transform: {},
+  testTimeout: 7000,
   setupFilesAfterEnv: ['<rootDir>/test/unit.setup.js'],
   collectCoverage: true,
   collectCoverageFrom: ['packages/**/*.js', 'example/**/*.js'],
