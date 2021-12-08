@@ -4,9 +4,7 @@
   "info": {
     "singularName": "episode",
     "pluralName": "episodes",
-    "displayName": "Episode",
-    "name": "Episode",
-    "description": ""
+    "displayName": "Episode"
   },
   "options": {
     "draftAndPublish": true

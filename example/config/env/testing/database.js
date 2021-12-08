@@ -6,7 +6,7 @@ module.exports = {
   connection: {
     client: 'sqlite',
     connection: {
-      filename: path.join(__dirname, '../../..', './.tmp/test.db'),
+      filename: path.join(__dirname, '../../..', `./.tmp/test-${process.env.JEST_WORKER_ID}.db`),
     },
     useNullAsDefault: true,
   },

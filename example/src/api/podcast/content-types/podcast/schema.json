@@ -4,9 +4,7 @@
   "info": {
     "singularName": "podcast",
     "pluralName": "podcasts",
-    "displayName": "Podcast",
-    "name": "Podcast",
-    "description": ""
+    "displayName": "Podcast"
   },
   "options": {
     "draftAndPublish": false

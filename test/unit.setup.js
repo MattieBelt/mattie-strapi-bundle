@@ -1,9 +1,10 @@
 'use strict';
 
-const { createStrapiInstance } = require('./helpers/strapi');
+const { createStrapiInstance, removeTestDatabase } = require('./helpers/strapi');
 
 let instance;
 beforeAll(async () => {
+  removeTestDatabase();
   instance = await createStrapiInstance();
 });
 
