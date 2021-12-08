@@ -27,9 +27,9 @@ const createStrapiInstance = async () => {
  * Deletes the test sqlite database.
  */
 const removeTestDatabase = () => {
-  const databasePath = path.join( APP_PATH, `./.tmp/test-${process.env.JEST_WORKER_ID}.db`);
+  const databasePath = path.join(APP_PATH, `./.tmp/test-${process.env.JEST_WORKER_ID}.db`);
 
-  if(existsSync(databasePath)) {
+  if (existsSync(databasePath)) {
     unlinkSync(databasePath);
   }
 };
