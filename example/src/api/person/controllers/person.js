@@ -1,3 +1,6 @@
 'use strict';
 
-module.exports = {};
+const { createCoreController } = require('@strapi/strapi').factories;
+
+module.exports = createCoreController('api::person.person');
+ 
