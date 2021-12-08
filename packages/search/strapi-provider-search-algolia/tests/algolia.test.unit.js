@@ -2,7 +2,7 @@
 
 const { categories } = require('./__mocks__/categories');
 
-describe('Algolia provider', function() {
+describe('Algolia provider', function () {
   jest.setTimeout(20000);
 
   test('Algolia provider should be initialized', async () => {
