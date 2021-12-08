@@ -16,6 +16,7 @@ The bundle brings extra easy-to-use features to the Strapi eco-system.
 [mattie-bundle.mattiebelt.com](https://mattie-bundle.mattiebelt.com/search/plugin)
 
 ## Other packages ✨
+
 - [Algolia Search Provider](https://mattie-bundle.mattiebelt.com/search/providers#algolia)
 
 ## License

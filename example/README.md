@@ -12,6 +12,7 @@ This example Strapi application is part of the Mattie bundle for Strapi.
 The bundle brings extra easy-to-use features to the Strapi eco-system.
 
 ## Included packages ✨
+
 - [Search Plugin](https://mattie-bundle.mattiebelt.com/search/plugin)
 - [Algolia Search Provider](https://mattie-bundle.mattiebelt.com/search/providers#algolia)
 
