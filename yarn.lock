@@ -2276,6 +2276,20 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.1.tgz#b2a5ad899645e0b47d3bba1d1ce078ee3f8ebc6c"
+  integrity sha512-5W5vsFgjPmLLOpJpEWITZ+m5A0ov3X9jKFGc069tZ/wWi23FIJaFqSY2+8TI4kVtw0EdbDJBKIQhOJqislsY4g==
+  dependencies:
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.1.tgz#14e8977cf4986ea2007ca6efd093be163417dd9f"
+  integrity sha512-OcMDGXRwjHbtvtEDtJjk0vzHolaPiIgX/FstFrWF9z4ENXu/D5g+6opJx31h91JUdwNxfB69/4UaGTv1MfmGPA==
+  dependencies:
+    algoliasearch "^4.9.1"
+
 "@node-redis/client@^1.0.0":
   version "1.0.0"
   resolved "https://registry.yarnpkg.com/@node-redis/client/-/client-1.0.0.tgz#25f6773c3a6997367772dc4d0eacd6e954063490"
@@ -6208,6 +6222,16 @@ eslint-config-airbnb-base@^14.2.1:
     confusing-browser-globals "^1.0.10"
     object.assign "^4.1.2"
     object.entries "^1.1.2"
+
+eslint-config-airbnb-base@^15.0.0:
+  version "15.0.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-airbnb-base/-/eslint-config-airbnb-base-15.0.0.tgz#6b09add90ac79c2f8d723a2580e07f3925afd236"
+  integrity sha512-xaX3z4ZZIcFLvh2oUNvcX5oEofXda7giYmuplVxoOg5A7EXJMrUyqRgR+mhDhPK8LZ4PttFOBvCYDbX3sUoUig==
+  dependencies:
+    confusing-browser-globals "^1.0.10"
+    object.assign "^4.1.2"
+    object.entries "^1.1.5"
+    semver "^6.3.0"
 
 eslint-config-airbnb@^18.2.1:
   version "18.2.1"
