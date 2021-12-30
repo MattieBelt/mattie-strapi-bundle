@@ -8,5 +8,11 @@
   "icon": "/icon.png",
   "github": "MattieBelt/mattie-strapi-bundle",
   "twitter": "@MattieBelt",
-  "defaultBranch": "master"
+  "defaultBranch": "master",
+  "algolia": {
+    "appId": "HR08D7CCZF",
+    "apiKey": "6ecd8e34e3b56523ed7ccde3f12be468",
+    "indexName": "mattie-bundle-mattiebelt",
+    "langAttribute": "lang"
+  }
 }
