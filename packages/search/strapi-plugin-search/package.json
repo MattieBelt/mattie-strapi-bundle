@@ -13,8 +13,8 @@
     "lodash": "^4.17.21"
   },
   "peerDependencies": {
-    "@strapi/strapi": "4.0.0",
-    "@strapi/utils": "4.0.0"
+    "@strapi/strapi": "4.0.2",
+    "@strapi/utils": "4.0.2"
   },
   "keywords": [
     "strapi",
