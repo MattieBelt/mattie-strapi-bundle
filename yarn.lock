@@ -1248,10 +1248,10 @@
   resolved "https://registry.yarnpkg.com/@emotion/weak-memoize/-/weak-memoize-0.2.5.tgz#8eed982e2ee6f7f4e44c253e12962980791efd46"
   integrity sha512-6U71C2Wp7r5XtFtQzYrW5iKFT67OixrSxjI4MptCHzdSVlgabczzqLe0ZSgnub/5Kp4hSbpDB1tMytZY9pwxxA==
 
-"@es-joy/jsdoccomment@0.14.1":
-  version "0.14.1"
-  resolved "https://registry.yarnpkg.com/@es-joy/jsdoccomment/-/jsdoccomment-0.14.1.tgz#1d234e241884fab9bff69aa11575c7e8893b3610"
-  integrity sha512-yiA5X6BSIv99DIeRl7PTBxqg7Lx81cx+ghbW6UJJxoVAKX4NxSAdZ7DKTXsSILUL4FuHDNb54AylTndLdLm8+w==
+"@es-joy/jsdoccomment@0.14.2":
+  version "0.14.2"
+  resolved "https://registry.yarnpkg.com/@es-joy/jsdoccomment/-/jsdoccomment-0.14.2.tgz#16f5411679066b277cf6d9e8c94a7e576aca1b55"
+  integrity sha512-812igKXDcLEdkwUbJvnhzMy88dBBiDeaf3mMF1jnQwclIObu5UQB8ow1KAvDRN1FQqpB+IsZnpmRA0jZ6KGt3g==
   dependencies:
     comment-parser "1.3.0"
     esquery "^1.4.0"
@@ -2279,6 +2279,20 @@
   dependencies:
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
+
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.1.tgz#b2a5ad899645e0b47d3bba1d1ce078ee3f8ebc6c"
+  integrity sha512-5W5vsFgjPmLLOpJpEWITZ+m5A0ov3X9jKFGc069tZ/wWi23FIJaFqSY2+8TI4kVtw0EdbDJBKIQhOJqislsY4g==
+  dependencies:
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.1":
+  version "1.0.0-alpha.1"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.1.tgz#14e8977cf4986ea2007ca6efd093be163417dd9f"
+  integrity sha512-OcMDGXRwjHbtvtEDtJjk0vzHolaPiIgX/FstFrWF9z4ENXu/D5g+6opJx31h91JUdwNxfB69/4UaGTv1MfmGPA==
+  dependencies:
+    algoliasearch "^4.9.1"
 
 "@node-redis/client@^1.0.1":
   version "1.0.1"
@@ -6271,11 +6285,11 @@ eslint-plugin-import@^2.22.1:
     tsconfig-paths "^3.11.0"
 
 eslint-plugin-jsdoc@^37.4.0:
-  version "37.4.2"
-  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-37.4.2.tgz#971ed6118722e00b60652dbb804e7eb78edd88a9"
-  integrity sha512-hKTIu5m0PxD21ZXdFVFpknEyp9aMvDMzamR+1bkcRHK9MDIYgroRGBQCeHupvcZ5TyGU0EfE+ed0FhLhkbekfQ==
+  version "37.5.1"
+  resolved "https://registry.yarnpkg.com/eslint-plugin-jsdoc/-/eslint-plugin-jsdoc-37.5.1.tgz#9ac0c8c4528112a3d1800796326e7f859f6ef1d9"
+  integrity sha512-WMv/Na5QdpMQao1MR3SgYpGFi2PSrhh/JljlErQru9ZYXf1j9oQVIVCELQV7jcyqKQ/svPqCyU8eMhet9dzP+w==
   dependencies:
-    "@es-joy/jsdoccomment" "0.14.1"
+    "@es-joy/jsdoccomment" "0.14.2"
     comment-parser "1.3.0"
     debug "^4.3.3"
     escape-string-regexp "^4.0.0"
