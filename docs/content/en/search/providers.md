@@ -1,6 +1,6 @@
 ---
 title: Providers
-description: 'Get started with fast content search by installing one of these strapi search providers!'
+description: 'Get started with fast content search by installing one of these Strapi Search Providers!'
 category: 🔍 Search
 position: 11
 badge: 1.0.0-alpha.1
@@ -26,20 +26,20 @@ In the future the Mattie Bundle will develop and officially support multiple pro
 
 ### Installation
 
-Add `@mattie/strapi-provider-search-algolia` as dependency to your project with:
+Add `@mattie-bundle/strapi-provider-search-algolia` as dependency to your project with:
 
 <code-group>
   <code-block label="Yarn" active>
 
 ```bash
-yarn add @mattie/strapi-provider-search-algolia
+yarn add @mattie-bundle/strapi-provider-search-algolia
 ```
 
   </code-block>
   <code-block label="NPM">
 
 ```bash
-npm install @mattie/strapi-provider-search-algolia
+npm install @mattie-bundle/strapi-provider-search-algolia
 ```
 
   </code-block>

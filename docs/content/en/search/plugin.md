@@ -1,7 +1,7 @@
 ---
-title: Search plugin
-subtitle: 'Get started with fast content search by installing this strapi search plugin! 🔍'
-description: 'Get started with fast content search by installing this strapi search plugin!'
+title: Search Plugin
+subtitle: 'Get started with fast content search by installing this Strapi Search Plugin! 🔍'
+description: 'Get started with fast content search by installing this Strapi Search Plugin!'
 category: 🔍 Search
 position: 10
 badge: 1.0.0-alpha.1
@@ -14,8 +14,8 @@ futureFeatures:
   - Before save/update/delete methods/lifecycles
   - Index conditions
   - Multiple providers support
-  - Manage indexes from Admin panel (e.g. View or Delete indexed objects)
-  - Global search bar in Strapi admin panel (e.g. InstantSearch.js)
+  - Manage indexes from admin panel (e.g. View or Delete indexed objects)
+  - Global search bar in admin panel (e.g. InstantSearch.js)
 ---
 
 <list :items="features"></list>
@@ -26,20 +26,20 @@ futureFeatures:
 
 ## Installation
 
-Add `@mattie/strapi-plugin-search` as dependency to your project with:
+Add `@mattie-bundle/strapi-plugin-search` as dependency to your project with:
 
 <code-group>
   <code-block label="Yarn" active>
 
 ```bash
-yarn add @mattie/strapi-plugin-search
+yarn add @mattie-bundle/strapi-plugin-search
 ```
 
   </code-block>
   <code-block label="NPM">
 
 ```bash
-npm install @mattie/strapi-plugin-search
+npm install @mattie-bundle/strapi-plugin-search
 ```
 
   </code-block>
