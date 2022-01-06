@@ -1,6 +1,6 @@
 {
   "name": "@mattie-bundle/strapi-provider-search-algolia",
-  "version": "1.0.0-alpha.1",
+  "version": "1.0.0-alpha.2",
   "description": "Algolia provider for strapi search plugin",
   "strapi": {
     "isProvider": true
