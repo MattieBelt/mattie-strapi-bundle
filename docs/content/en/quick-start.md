@@ -14,17 +14,16 @@ Checkout [the example](https://github.com/MattieBelt/mattie-strapi-bundle/tree/m
 
 ## Search plugin with Algolia provider ✨
 
-This guide will provide a step-by-step explanation on how to setup content indexing to Algolia for a Strapi `v4` application. 
+This guide will provide a step-by-step explanation on how to setup content indexing to Algolia for a Strapi `v4` application.
 The six steps will explain in detail how to setup a basic Strapi application, your Algolia application, the basic plugin config and how to index your first entry to Algolia.
 
-#### Prerequisites 
+#### Prerequisites
 
 - Node ([supported versions](https://docs.strapi.io/developer-docs/latest/setup-deployment-guides/installation/cli.html#preparing-the-installation))
 - Yarn or npm
 - Basic Strapi knowledge ([Strapi quick start guide](https://docs.strapi.io/developer-docs/latest/getting-started/quick-start.html))
 
-
-### 1. Strapi application 
+### 1. Strapi application
 
 First we start by creating a fresh Strapi application, run the following command.
 
@@ -49,7 +48,6 @@ After the Strapi application has been created register your first Admin user.
 
 <img src="/usage/search-with-algolia/init-admin.png" alt="Initial Admin user" />
 
-
 ### 2. Create a _Post_ collection type
 
 After registering the initial Admin user, we can use the Content-Type Builder to create our first collection type _Post_. Navigate to the Content-Type Builder and create a new collection type with the following configurations and example fields:
@@ -62,7 +60,7 @@ Save the collection type and wait for the server to restart.
 ### 3. Sign up and create your Algolia application
 
 If you don't already have an Algolia application you can create on by signing up at [_algolia.com/users/sign_up_](https://www.algolia.com/users/sign_up).
-Once you have created you Algolia application, navigate to _Settings > Team and Access > API Keys_ or [_algolia.com/account/api-keys_](https://www.algolia.com/account/api-keys). 
+Once you have created you Algolia application, navigate to _Settings > Team and Access > API Keys_ or [_algolia.com/account/api-keys_](https://www.algolia.com/account/api-keys).
 
 <img src="/usage/search-with-algolia/algolia-settings-api-keys.png" alt="Algolia API keys settings" />
 
@@ -73,7 +71,6 @@ Copy your `Application ID` and `Admin API Key` to the `.env` file in your projec
 ALGOLIA_PROVIDER_APPLICATION_ID=G9Z63O9QUF
 ALGOLIA_PROVIDER_ADMIN_API_KEY=043d7•••••••••••••••••••••••8102
 ```
-
 
 ### 4. Install plugin and provider
 
@@ -96,7 +93,6 @@ npm install @mattie-bundle/strapi-plugin-search @mattie-bundle/strapi-provider-s
   </code-block>
 </code-group>
 
-
 ### 5. Configure the plugin and provider
 
 After the packages have been installed we can configure the Search plugin and Algolia provider in the `./config/plugins.js` file with the following example below. If the `plugins.js` file doesn't exist you can create a new file.
@@ -114,9 +110,7 @@ module.exports = ({ env }) => ({
         apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
         applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
       },
-      contentTypes: [
-        { name: 'api::post.post' },
-      ],
+      contentTypes: [{ name: 'api::post.post' }],
     },
   },
 });
@@ -129,6 +123,6 @@ After the server has started go to the admin panel (http://localhost:1337/admin)
 
 <img src="/usage/search-with-algolia/create-post-entry.png" alt="Create first Post entry" />
 
-Now the entry is saved, check your Algolia application if it has been indexed successfully, in the Algolia dashboard you should see something similar as the image below. 
+Now the entry is saved, check your Algolia application if it has been indexed successfully, in the Algolia dashboard you should see something similar as the image below.
 
 <img src="/usage/search-with-algolia/algolia-first-post-entry-indexes.png" alt="First Post entry indexed" />
