@@ -1,6 +1,6 @@
 ---
 title: Quick Start Guides
-subtitle: 'Guides to quickly get started with this mattie-bundle for Strapi.'
+subtitle: 'Guides to quickly get started with this mattie-bundle for Strapi. 📚'
 description: 'Get quickly started with these guides for this mattie-bundle for Strapi.'
 position: 01
 category: '🚀 Getting Started'
@@ -12,7 +12,7 @@ Checkout [the example](https://github.com/MattieBelt/mattie-strapi-bundle/tree/m
 
 </alert>
 
-## Search plugin with Algolia provider ✨
+## Search plugin with Algolia provider
 
 This guide will provide a step-by-step explanation on how to setup content indexing to Algolia for a Strapi `v4` application.
 The six steps will explain in detail how to setup a basic Strapi application, your Algolia application, the basic plugin config and how to index your first entry to Algolia.
@@ -44,13 +44,13 @@ npx create-strapi-app search-with-algolia --quickstart
   </code-block>
 </code-group>
 
-After the Strapi application has been created register your first Admin user.
+After the Strapi application has been created register your first administrator.
 
-<img src="/usage/search-with-algolia/init-admin.png" alt="Initial Admin user" />
+<img src="/usage/search-with-algolia/init-admin.png" alt="Initial administrator" />
 
 ### 2. Create a _Post_ collection type
 
-After registering the initial Admin user, we can use the Content-Type Builder to create our first collection type _Post_. Navigate to the Content-Type Builder and create a new collection type with the following configurations and example fields:
+After registering the initial administrator, we can use the Content-Type Builder to create our first collection type _Post_. Navigate to the Content-Type Builder and create a new collection type with the following configurations and example fields:
 
 <img src="/usage/search-with-algolia/create-post-collection-type-configurations.png" alt="Post collection type configurations" />
 <img src="/usage/search-with-algolia/create-post-collection-type-fields.png" alt="Post collection type fields" />
@@ -95,7 +95,7 @@ npm install @mattie-bundle/strapi-plugin-search @mattie-bundle/strapi-provider-s
 
 ### 5. Configure the plugin and provider
 
-After the packages have been installed we can configure the Search plugin and Algolia provider in the `./config/plugins.js` file with the following example below. If the `plugins.js` file doesn't exist you can create a new file.
+After the packages have been installed we can configure the Search plugin and the Algolia provider in the `./config/plugins.js` file with the following example below. If the `plugins.js` file doesn't exist you can create a new file.
 
 ```js [./config/plugins.js]
 'use strict';
@@ -116,10 +116,10 @@ module.exports = ({ env }) => ({
 });
 ```
 
-### 6. Index an _Post_ entry
+### 6. Index a _Post_ entry  ✨
 
 Everything is correctly setup! Let's start the Strapi application with `yarn develop` or `npm run develop` and create the first _Post_ entry.
-After the server has started go to the admin panel (http://localhost:1337/admin) and navigate to _Content Manager > COLLECTION TYPES > Post_ and click on _+ Create new Entry_. Now create your first _Post_ and hit _Save_ and _Publish_ to index this entry into your Algolia Application.
+After the server has started go to the admin panel (http://localhost:1337/admin) and navigate to _Content Manager > COLLECTION TYPES > Post_ and click on _+ Create new Entry_. Now create your first _Post_ and hit _Save_ and _Publish_ to index this entry into your Algolia application.
 
 <img src="/usage/search-with-algolia/create-post-entry.png" alt="Create first Post entry" />
 
