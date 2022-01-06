@@ -6,7 +6,7 @@ category: 🔍 Search
 position: 10
 badge: 1.0.0-alpha.1
 features:
-  - Index your contet
+  - Index your content
   - Configure each index and the fields
   - Search provider system
 futureFeatures:

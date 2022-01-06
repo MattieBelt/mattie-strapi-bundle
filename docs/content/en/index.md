@@ -15,7 +15,7 @@ This bundle brings extra easy-to-use features to the Strapi eco-system.
 
 <list :items="features"></list>
 
-[**Search plugin:**](./search/search-plugin) Index your Strapi managed content easy and effectively to a (third-party) [**Search provider**](./search/providers) and be able to instantly show results on search.
+[**Search plugin:**](./search/plugin) Index your Strapi managed content easy and effectively to a (third-party) [**Search provider**](./search/providers) and be able to instantly show results on search.
 
 <alert>
 
