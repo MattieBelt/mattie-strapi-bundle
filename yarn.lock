@@ -2325,6 +2325,20 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.2.tgz#a14e9c5ddfc0a8f2c4b1f3a2253d6b898ec104cb"
+  integrity sha512-nC+n3m0wIj6COg+QuTKxcfwklG2k8RuDNIoYlIBFc09BX49Jyjhio+QUiLDEm5G6r9x6dtA27xb4PzOHk5b7Zg==
+  dependencies:
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.2.tgz#1e707a95a9587a6b3dd6a0de89c832cbd576d5a3"
+  integrity sha512-A+U2SdyOSVzT4sZqSKpy9hmKRfu4wGQhLqJP7pJTRhsmLlNy+1n0ffa0oYGMlSKXJYgEjHqsf/hUHQBYXKBk+w==
+  dependencies:
+    algoliasearch "^4.9.1"
+
 "@node-redis/client@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@node-redis/client/-/client-1.0.1.tgz#ddca6021097ce1026fedc193cac8c36b05c6cad8"
@@ -9930,9 +9944,9 @@ markdown-it-sup@1.0.0:
   integrity sha1-y5yf+RpSVawI8/09YyhuFd8KH8M=
 
 markdown-it@^12.0.6:
-  version "12.3.0"
-  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.0.tgz#11490c61b412b8f41530319c005ecdcd4367171f"
-  integrity sha512-T345UZZ6ejQWTjG6PSEHplzNy5m4kF6zvUpHVDv8Snl/pEU0OxIK0jGg8YLVNwJvT8E0YJC7/2UvssJDk/wQCQ==
+  version "12.3.2"
+  resolved "https://registry.yarnpkg.com/markdown-it/-/markdown-it-12.3.2.tgz#bf92ac92283fe983fe4de8ff8abfb5ad72cd0c90"
+  integrity sha512-TchMembfxfNVpHkbtriWltGWc+m3xszaRD0CZup7GFFhzIgQqxIfn3eGj1yZpfuflzPvfkt611B2Q/Bsk1YnGg==
   dependencies:
     argparse "^2.0.1"
     entities "~2.1.0"
