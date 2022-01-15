@@ -2325,6 +2325,20 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.2.tgz#a14e9c5ddfc0a8f2c4b1f3a2253d6b898ec104cb"
+  integrity sha512-nC+n3m0wIj6COg+QuTKxcfwklG2k8RuDNIoYlIBFc09BX49Jyjhio+QUiLDEm5G6r9x6dtA27xb4PzOHk5b7Zg==
+  dependencies:
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.2":
+  version "1.0.0-alpha.2"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.2.tgz#1e707a95a9587a6b3dd6a0de89c832cbd576d5a3"
+  integrity sha512-A+U2SdyOSVzT4sZqSKpy9hmKRfu4wGQhLqJP7pJTRhsmLlNy+1n0ffa0oYGMlSKXJYgEjHqsf/hUHQBYXKBk+w==
+  dependencies:
+    algoliasearch "^4.9.1"
+
 "@node-redis/client@^1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@node-redis/client/-/client-1.0.1.tgz#ddca6021097ce1026fedc193cac8c36b05c6cad8"
@@ -6952,9 +6966,9 @@ fn.name@1.x.x:
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.4:
-  version "1.14.6"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.6.tgz#8cfb281bbc035b3c067d6cd975b0f6ade6e855cd"
-  integrity sha512-fhUl5EwSJbbl8AR+uYL2KQDxLkdSjZGR36xy46AO7cOMTrCMON6Sa28FmAnC2tRTDbd/Uuzz3aJBv7EBN7JH8A==
+  version "1.14.7"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
+  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
 
 font-awesome@^4.7.0:
   version "4.7.0"
