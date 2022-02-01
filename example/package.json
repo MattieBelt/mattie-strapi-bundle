@@ -11,9 +11,9 @@
   "dependencies": {
     "@mattie-bundle/strapi-plugin-search": "^1.0.0-alpha.2",
     "@mattie-bundle/strapi-provider-search-algolia": "^1.0.0-alpha.2",
-    "@strapi/plugin-i18n": "4.0.3",
-    "@strapi/plugin-users-permissions": "4.0.3",
-    "@strapi/strapi": "4.0.3",
+    "@strapi/plugin-i18n": "4.0.6",
+    "@strapi/plugin-users-permissions": "4.0.6",
+    "@strapi/strapi": "4.0.6",
     "sqlite3": "5.0.2"
   },
   "author": {
