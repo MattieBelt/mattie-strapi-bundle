@@ -95,17 +95,15 @@ Use `yarn strapi content-types:list` to list all existing content type UIDs with
 
 ```js [./config/plugins.js]
 module.exports = ({ env }) => ({
-  settings: {
-    search: {
-      enabled: true,
-      config: {
-        provider: 'algolia',
-        providerOptions: {
-          apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
-          applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
-        },
-        contentTypes: [{ name: 'api::podcast.podcast' }, { name: 'api::episode.episode' }, { name: 'api::category.category' }],
+  search: {
+    enabled: true,
+    config: {
+      provider: 'algolia',
+      providerOptions: {
+        apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
+        applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
       },
+      contentTypes: [{ name: 'api::podcast.podcast' }, { name: 'api::episode.episode' }, { name: 'api::category.category' }],
     },
   },
 });
@@ -116,22 +114,20 @@ module.exports = ({ env }) => ({
 
 ```js [./config/plugins.js]
 module.exports = ({ env }) => ({
-  settings: {
-    search: {
-      enabled: true,
-      config: {
-        // ..
-        contentTypes: [
-          {
-            name: 'api::podcast.podcast',
-            index: 'global-search',
-          },
-          {
-            name: 'api::episode.episode',
-            index: 'global-search',
-          },
-        ],
-      },
+  search: {
+    enabled: true,
+    config: {
+      // ..
+      contentTypes: [
+        {
+          name: 'api::podcast.podcast',
+          index: 'global-search',
+        },
+        {
+          name: 'api::episode.episode',
+          index: 'global-search',
+        },
+      ],
     },
   },
 });

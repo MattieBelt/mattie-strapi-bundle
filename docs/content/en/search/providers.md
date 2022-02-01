@@ -64,17 +64,15 @@ The usage of environment variables is recommended, checkout the Strapi documenta
 
 ```js [./config/plugins.js]
 module.exports = ({ env }) => ({
-  settings: {
-    search: {
-      enabled: true,
-      config: {
-        provider: 'algolia',
-        providerOptions: {
-          apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
-          applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
-        },
-        // ...
+  search: {
+    enabled: true,
+    config: {
+      provider: 'algolia',
+      providerOptions: {
+        apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
+        applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
       },
+      // ...
     },
   },
 });
