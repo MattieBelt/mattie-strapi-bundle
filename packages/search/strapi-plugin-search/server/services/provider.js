@@ -1,6 +1,7 @@
 'use strict';
 
 const { wrapMethodWithError } = require('../utils/error');
+const { getConfig } = require('../utils/helpers');
 const { validateProvider, PROVIDER_METHODS } = require('../utils/validate');
 
 /**
@@ -18,7 +19,7 @@ module.exports = () => ({
    * @param {Function} pluginConfig.instance.init - Initiation function of provider instance
    */
   async loadProvider(pluginConfig) {
-    pluginConfig = pluginConfig ? pluginConfig : strapi.config.get('plugin.search');
+    pluginConfig = pluginConfig ? pluginConfig : getConfig();
 
     try {
       // Todo implement v4 package loader logic

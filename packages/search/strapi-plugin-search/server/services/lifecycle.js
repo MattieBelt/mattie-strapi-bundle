@@ -2,6 +2,8 @@
 
 const { omit, pick } = require('lodash/fp');
 
+const { getConfig } = require('../utils/helpers');
+
 /**
  * Gets lifecycle service
  *
@@ -13,7 +15,7 @@ module.exports = () => ({
    */
   async loadLifecycleMethods() {
     const provider = strapi.plugin('search').provider;
-    const { excludedFields = [], prefix: indexPrefix = '', contentTypes } = strapi.config.get('plugin.search');
+    const { excludedFields = [], prefix: indexPrefix = '', contentTypes } = getConfig();
 
     // Loop over configured contentTypes in ./config/plugins.js
     contentTypes &&
