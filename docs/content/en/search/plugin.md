@@ -78,8 +78,8 @@ The plugin can be configured by file (`./config/plugins.js`). The file configura
 | `excludedFields`      | Fields that are not indexed on all indexes.                                                                        | `Array<String>`     | `['created_by', 'updated_by']`     |
 | `debug`               | Enable or disable the debug logs.                                                                                  | `Boolean`           | `false`                            |
 | `contentTypes`        | List op indexes content types.                                                                                     | `Array<Object>`     |                                    |
-| `contentTypes.name`   | UID of the content type.                                                                                           | `String` (required) |                                    |
-| `contentTypes.index`  | Name of the index.                                                                                                 | `String`            | `contentTypes.name`                |
+| `contentTypes.uid`   | UID of the content type.                                                                                           | `String` (required) |                                    |
+| `contentTypes.index`  | Name of the index.                                                                                                 | `String`            | `contentTypes.uid`                |
 | `contentTypes.fields` | Fields that are indexed.                                                                                           | `Array<String>`     | All fields.                        |
 
 <alert type="info">
@@ -103,7 +103,7 @@ module.exports = ({ env }) => ({
         apiKey: env('ALGOLIA_PROVIDER_ADMIN_API_KEY'),
         applicationId: env('ALGOLIA_PROVIDER_APPLICATION_ID'),
       },
-      contentTypes: [{ name: 'api::podcast.podcast' }, { name: 'api::episode.episode' }, { name: 'api::category.category' }],
+      contentTypes: [{ uid: 'api::podcast.podcast' }, { uid: 'api::episode.episode' }, { uid: 'api::category.category' }],
     },
   },
 });
@@ -120,11 +120,11 @@ module.exports = ({ env }) => ({
       // ..
       contentTypes: [
         {
-          name: 'api::podcast.podcast',
+          uid: 'api::podcast.podcast',
           index: 'global-search',
         },
         {
-          name: 'api::episode.episode',
+          uid: 'api::episode.episode',
           index: 'global-search',
         },
       ],
@@ -151,16 +151,16 @@ module.exports = ({ env }) => ({
       debug: true,
       contentTypes: [
         {
-          name: 'api::podcast.podcast',
+          uid: 'api::podcast.podcast',
           index: 'podcast',
         },
         {
-          name: 'api::episode.episode',
+          uid: 'api::episode.episode',
           index: 'episode',
           fields: ['id', 'title', 'subtitle', 'description', 'duration', 'type', 'keyWords', 'showNotes', 'podcast', 'hosts', 'quests'],
         },
         {
-          name: 'api::category.category',
+          uid: 'api::category.category',
         },
       ],
     },

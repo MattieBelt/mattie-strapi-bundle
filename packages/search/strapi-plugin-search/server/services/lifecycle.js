@@ -20,10 +20,10 @@ module.exports = () => ({
     // Loop over configured contentTypes in ./config/plugins.js
     contentTypes &&
       contentTypes.forEach((contentType) => {
-        const { name, index, prefix: idPrefix = '', fields = [] } = contentType;
+        const { uid, index, prefix: idPrefix = '', fields = [] } = contentType;
 
-        if (strapi.contentTypes[name]) {
-          const indexName = indexPrefix + (index ? index : name);
+        if (strapi.contentTypes[uid]) {
+          const indexName = indexPrefix + (index ? index : uid);
 
           const sanitize = (result) => {
             if (fields.length > 0) {
@@ -34,7 +34,7 @@ module.exports = () => ({
           };
 
           strapi.db.lifecycles.subscribe({
-            models: [name],
+            models: [uid],
 
             async afterCreate(event) {
               provider.create({
@@ -85,7 +85,7 @@ module.exports = () => ({
             // },
           });
         } else {
-          strapi.log.error(`Search plugin bootstrap failed: Search plugin could not load lifecycles on model '${name}' as it doesn't exist.`);
+          strapi.log.error(`Search plugin bootstrap failed: Search plugin could not load lifecycles on model '${uid}' as it doesn't exist.`);
         }
       });
   },

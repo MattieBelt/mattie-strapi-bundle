@@ -14,16 +14,16 @@ module.exports = ({ env }) => ({
       debug: env.bool('DEBUG', false),
       contentTypes: [
         {
-          name: 'api::podcast.podcast',
+          uid: 'api::podcast.podcast',
           index: 'podcast',
         },
         {
-          name: 'api::episode.episode',
+          uid: 'api::episode.episode',
           index: 'episode',
           fields: ['id', 'title', 'subtitle', 'description', 'duration', 'type', 'keyWords', 'showNotes', 'podcast', 'hosts', 'quests'],
         },
         {
-          name: 'api::category.category',
+          uid: 'api::category.category',
         },
       ],
     },

@@ -31,7 +31,6 @@
     "file": {
       "type": "media",
       "multiple": false,
-      "required": true,
       "allowedTypes": [
         "files",
         "videos"

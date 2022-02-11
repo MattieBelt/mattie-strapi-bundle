@@ -1,5 +1,7 @@
 'use strict';
 
+const { pick } = require('lodash/fp');
+
 /**
  * Gets a plugin's config
  *
@@ -19,8 +21,20 @@ const getService = (name) => {
   return strapi.plugin('search').service(name);
 };
 
+/**
+ * Gets a array of content types
+ *
+ * @returns {object} - Content types
+ */
+const getContentTypes = () => {
+  return Object.keys(strapi.contentTypes).map((key) => {
+    return pick(['uid', 'info', 'kind', 'attributes'], strapi.contentTypes[key]);
+  });
+};
+
 
 module.exports = {
   getConfig,
+  getContentTypes,
   getService,
 };

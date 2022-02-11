@@ -6,11 +6,7 @@ module.exports = {
   /**
    * Default plugin configuration
    */
-  default: {
-    prefix: strapi.config.environment + '_',
-    excludedFields: ['createdBy', 'updatedBy'],
-    debug: false,
-  },
+  default: {},
 
   /**
    * Validates plugin configuration

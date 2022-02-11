@@ -2,7 +2,7 @@
 
 module.exports = {
   extends: ['airbnb', 'eslint:recommended', 'plugin:react/recommended', 'plugin:redux-saga/recommended', 'prettier'],
-  plugins: ['react', 'redux-saga', 'react-hooks', 'import', 'jsx-a11y'],
+  plugins: ['import', 'jsx', 'jsx-a11y', 'react', 'redux-saga', 'react-hooks'],
   env: {
     browser: true,
     commonjs: true,

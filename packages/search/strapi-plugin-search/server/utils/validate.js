@@ -2,7 +2,7 @@
 
 const { yup } = require('@strapi/utils');
 
-const PROVIDER_METHODS = ['create', 'update', 'delete', 'createMany', 'updateMany', 'deleteMany'];
+const PROVIDER_METHODS = ['create', 'update', 'delete', 'createMany', 'updateMany', 'deleteMany', 'clear'];
 
 /**
  * Validates plugin configuration
@@ -21,7 +21,7 @@ const validateConfig = (config) => {
         debug: yup.boolean(),
         contentTypes: yup.array().of(
           yup.object().shape({
-            name: yup.string().required(),
+            uid: yup.string().required(),
             index: yup.string(),
             fields: yup.array().of(yup.string().required()),
           }),

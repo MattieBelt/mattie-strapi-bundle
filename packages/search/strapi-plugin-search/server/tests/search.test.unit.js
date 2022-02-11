@@ -75,12 +75,12 @@ describe('Search plugin', function () {
         provider: 'string',
         contentTypes: [{}],
       }),
-    ).toThrow('Search plugin ConfigValidationError: contentTypes[0].name is a required field');
+    ).toThrow('Search plugin ConfigValidationError: contentTypes[0].uid is a required field');
 
     expect(() =>
       validateConfig({
         provider: 'string',
-        contentTypes: [{ name: 'api::contentType.contentType', fields: false }],
+        contentTypes: [{ uid: 'api::contentType.contentType', fields: false }],
       }),
     ).toThrow();
   });
