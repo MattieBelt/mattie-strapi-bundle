@@ -2274,6 +2274,21 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.3.tgz#8a14fc0b19562269686978d59eee0d70f454a799"
+  integrity sha512-HgkM9hWQFK2zYkJitSd3HIWgDiGb9wmU0OYWerKtN0Z0QupuGdY4IFDzdaU0vB6fR0cMEecaYtMVbbWorFvCEw==
+  dependencies:
+    "@strapi/utils" "^4.0.0"
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.3.tgz#80d68f9afce6584ad72effeae7cac8dd83b4d2ac"
+  integrity sha512-D00txWnhkVU9/Lxhz3+Ng3gVHsA+5QIm+O6HkY5T+RuRScX2wkcS7dowiu+/qCCYrMgN7APB09GvwZwPXK9amw==
+  dependencies:
+    algoliasearch "^4.9.1"
+
 "@node-redis/bloom@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@node-redis/bloom/-/bloom-1.0.1.tgz#144474a0b7dc4a4b91badea2cfa9538ce0a1854e"
@@ -6958,9 +6973,9 @@ fn.name@1.x.x:
   integrity sha512-GRnmB5gPyJpAhTQdSZTSp9uaPSvl09KoYcMQtsB9rQoOmzs9dH6ffeccH+Z+cv6P68Hu5bC6JjRh4Ah/mHSNRw==
 
 follow-redirects@^1.0.0, follow-redirects@^1.14.4, follow-redirects@^1.14.7:
-  version "1.14.7"
-  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.7.tgz#2004c02eb9436eee9a21446a6477debf17e81685"
-  integrity sha512-+hbxoLbFMbRKDwohX8GkTataGqO6Jb7jGwpAlwgy2bIz25XtRm7KEzJM76R1WiNT5SwZkX4Y75SwBolkpmE7iQ==
+  version "1.14.8"
+  resolved "https://registry.yarnpkg.com/follow-redirects/-/follow-redirects-1.14.8.tgz#016996fb9a11a100566398b1c6839337d7bfa8fc"
+  integrity sha512-1x0S9UVJHsQprFcEC/qnNzBLcIxsjAV905f/UkQxbclCsoTWlacCNOpQa/anodLl2uaEKFhfWOvM2Qg77+15zA==
 
 font-awesome@^4.7.0:
   version "4.7.0"
