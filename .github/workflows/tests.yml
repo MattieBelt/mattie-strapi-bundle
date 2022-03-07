@@ -15,7 +15,7 @@ jobs:
         node: [12, 14, 16]
     steps:
       - name: Checkout repo
-        uses: actions/checkout@v2
+        uses: actions/checkout@v3
 
       - name: Setup cache
         uses: actions/cache@v2
