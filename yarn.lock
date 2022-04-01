@@ -2274,6 +2274,21 @@
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
 
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.3.tgz#8a14fc0b19562269686978d59eee0d70f454a799"
+  integrity sha512-HgkM9hWQFK2zYkJitSd3HIWgDiGb9wmU0OYWerKtN0Z0QupuGdY4IFDzdaU0vB6fR0cMEecaYtMVbbWorFvCEw==
+  dependencies:
+    "@strapi/utils" "^4.0.0"
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.3.tgz#80d68f9afce6584ad72effeae7cac8dd83b4d2ac"
+  integrity sha512-D00txWnhkVU9/Lxhz3+Ng3gVHsA+5QIm+O6HkY5T+RuRScX2wkcS7dowiu+/qCCYrMgN7APB09GvwZwPXK9amw==
+  dependencies:
+    algoliasearch "^4.9.1"
+
 "@node-redis/bloom@1.0.1":
   version "1.0.1"
   resolved "https://registry.yarnpkg.com/@node-redis/bloom/-/bloom-1.0.1.tgz#144474a0b7dc4a4b91badea2cfa9538ce0a1854e"
@@ -6338,9 +6353,9 @@ eslint-config-airbnb@^19.0.4:
     object.entries "^1.1.5"
 
 eslint-config-prettier@^8.3.0:
-  version "8.3.0"
-  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.3.0.tgz#f7471b20b6fe8a9a9254cc684454202886a2dd7a"
-  integrity sha512-BgZuLUSeKzvlL/VUjx/Yb787VQ26RU3gGjA3iiFvdsp/2bMfVIWUVP7tjxtjS0e+HP409cPlPvNkQloz8C91ew==
+  version "8.5.0"
+  resolved "https://registry.yarnpkg.com/eslint-config-prettier/-/eslint-config-prettier-8.5.0.tgz#5a81680ec934beca02c7b1a61cf8ca34b66feab1"
+  integrity sha512-obmWKLUNCnhtQRKc+tmnYuQl0pFU1ibYJQ5BGhTVB08bHe9wC8qUeG7c08dj9XX+AuPj1YSGSQIHl1pnDHZR0Q==
 
 eslint-import-resolver-node@^0.3.6:
   version "0.3.6"
