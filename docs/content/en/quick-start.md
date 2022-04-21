@@ -121,7 +121,7 @@ module.exports = ({ env }) => ({
 Everything is correctly setup! Let's start the Strapi application with `yarn develop` or `npm run develop` and create the first _Post_ entry.
 After the server has started go to the admin panel (http://localhost:1337/admin) and navigate to _Content Manager > COLLECTION TYPES > Post_ and click on _+ Create new Entry_. Now create your first _Post_ and hit _Save_ and _Publish_ to index this entry into your Algolia application.
 
-**Note:** If your content has already been published before, make shure that you click _Unpublish_ before and then _Publish_ again. At this moment the plugin won't recognize the already published contend.
+**Note:** If your content has already been published before, make shure that you click _Unpublish_ before and then _Publish_ again. At this moment the plugin won't recognize the already published content.
 
 <img src="/usage/search-with-algolia/create-post-entry.png" alt="Create first Post entry" />
 
