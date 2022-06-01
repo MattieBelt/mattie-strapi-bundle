@@ -161,9 +161,9 @@
     source-map "^0.5.0"
 
 "@babel/eslint-parser@^7.15.0":
-  version "7.16.5"
-  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.16.5.tgz#48d3485091d6e36915358e4c0d0b2ebe6da90462"
-  integrity sha512-mUqYa46lgWqHKQ33Q6LNCGp/wPR3eqOYTUixHFsfrSQqRxH0+WOzca75iEjFr5RDGH1dDz622LaHhLOzOuQRUA==
+  version "7.18.2"
+  resolved "https://registry.yarnpkg.com/@babel/eslint-parser/-/eslint-parser-7.18.2.tgz#e14dee36c010edfb0153cf900c2b0815e82e3245"
+  integrity sha512-oFQYkE8SuH14+uR51JVAmdqwKYXGRjEXx7s+WiagVjqQ+HPE+nnwyF2qlVG8evUsUHmPcA+6YXMEDbIhEyQc5A==
   dependencies:
     eslint-scope "^5.1.1"
     eslint-visitor-keys "^2.1.0"
@@ -2273,6 +2273,21 @@
   dependencies:
     npmlog "^4.1.2"
     write-file-atomic "^3.0.3"
+
+"@mattie-bundle/strapi-plugin-search@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-plugin-search/-/strapi-plugin-search-1.0.0-alpha.3.tgz#8a14fc0b19562269686978d59eee0d70f454a799"
+  integrity sha512-HgkM9hWQFK2zYkJitSd3HIWgDiGb9wmU0OYWerKtN0Z0QupuGdY4IFDzdaU0vB6fR0cMEecaYtMVbbWorFvCEw==
+  dependencies:
+    "@strapi/utils" "^4.0.0"
+    lodash "^4.17.21"
+
+"@mattie-bundle/strapi-provider-search-algolia@^1.0.0-alpha.3":
+  version "1.0.0-alpha.3"
+  resolved "https://registry.yarnpkg.com/@mattie-bundle/strapi-provider-search-algolia/-/strapi-provider-search-algolia-1.0.0-alpha.3.tgz#80d68f9afce6584ad72effeae7cac8dd83b4d2ac"
+  integrity sha512-D00txWnhkVU9/Lxhz3+Ng3gVHsA+5QIm+O6HkY5T+RuRScX2wkcS7dowiu+/qCCYrMgN7APB09GvwZwPXK9amw==
+  dependencies:
+    algoliasearch "^4.9.1"
 
 "@node-redis/bloom@1.0.1":
   version "1.0.1"
