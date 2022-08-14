@@ -2,7 +2,7 @@
 
 const { yup } = require('@strapi/utils');
 
-const PROVIDER_METHODS = ['create', 'update', 'delete', 'createMany', 'updateMany', 'deleteMany'];
+const PROVIDER_METHODS = ['create', 'update', 'delete', 'createMany', 'updateMany', 'deleteMany', 'clear'];
 
 /**
  * Validates plugin configuration

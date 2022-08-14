@@ -15,6 +15,7 @@ describe('Algolia provider', function () {
         createMany: expect.any(Function),
         updateMany: expect.any(Function),
         deleteMany: expect.any(Function),
+        clear: expect.any(Function),
       }),
     );
 
@@ -26,6 +27,8 @@ describe('Algolia provider', function () {
     await strapi.plugin('search').provider.createMany({ indexName: 'category', data: categories });
     await strapi.plugin('search').provider.updateMany({ indexName: 'category', data: categories });
     await strapi.plugin('search').provider.deleteMany({ indexName: 'category', ids: categories.map((category) => category.id) });
+    await strapi.plugin('search').provider.createMany({ indexName: 'category', data: categories });
+    await strapi.plugin('search').provider.clear({ indexName: 'category' });
 
     // eslint-disable-next-line node/no-unsupported-features/es-builtins
     await Promise.allSettled([
@@ -35,6 +38,7 @@ describe('Algolia provider', function () {
       strapi.plugin('search').provider.createMany({ indexName: '', data: categories }),
       strapi.plugin('search').provider.updateMany({ indexName: '', data: categories }),
       strapi.plugin('search').provider.deleteMany({ indexName: '', ids: categories.map((category) => category.id) }),
+      strapi.plugin('search').provider.clear({ indexName: '' }),
     ]).then((results) => results.forEach((result) => expect(result.value).toBeUndefined()));
   });
 
