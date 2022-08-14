@@ -1,6 +1,6 @@
 'use strict';
 
-const { omit, pick } = require('lodash/fp');
+const { sanitize } = require('../utils/sanitize');
 
 /**
  * Gets lifecycle service
@@ -23,21 +23,13 @@ module.exports = () => ({
         if (strapi.contentTypes[name]) {
           const indexName = indexPrefix + (index ? index : name);
 
-          const sanitize = (result) => {
-            if (fields.length > 0) {
-              return pick(fields, result);
-            }
-
-            return omit(excludedFields, result);
-          };
-
           strapi.db.lifecycles.subscribe({
             models: [name],
 
             async afterCreate(event) {
               provider.create({
                 indexName,
-                data: sanitize(event.result),
+                data: sanitize(event.result, fields, excludedFields),
                 id: idPrefix + event.result.id,
               });
             },
@@ -54,7 +46,7 @@ module.exports = () => ({
             async afterUpdate(event) {
               provider.update({
                 indexName,
-                data: sanitize(event.result),
+                data: sanitize(event.result, fields, excludedFields),
                 id: idPrefix + event.result.id,
               });
             },

@@ -157,6 +157,23 @@ module.exports = {
             throw new Error(`Algolia provider: ${error.message}`);
           });
       },
+
+      /**
+       * Clears all entities from a index
+       *
+       * @param {object} params - Paramaters
+       * @param {string} params.indexName - Name of the index
+       * @returns {Promise<algoliasearch.ChunkedBatchResponse>} Promise with chunked task
+       */
+      clear({ indexName }) {
+        return client
+          .initIndex(indexName)
+          .clearObjects()
+          .then(() => debug && strapi.log.debug(`Algolia provider: Cleared all entries from index '${indexName}'.`))
+          .catch((error) => {
+            throw new Error(`Algolia provider: ${error.message}`);
+          });
+      },
     };
   },
 };
