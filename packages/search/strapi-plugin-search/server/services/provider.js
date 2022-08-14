@@ -69,7 +69,7 @@ module.exports = () => ({
             })),
           });
         } else {
-          strapi.log.error(`Search plugin bootstrap failed: Search plugin could not load lifecycles on model '${name}' as it doesn't exist.`);
+          strapi.log.error(`Search plugin rebuild failed: Search plugin could not rebuild index for '${name}' as it doesn't exist.`);
         }
       }
     } catch (error) {
