@@ -1,6 +1,6 @@
 'use strict';
 
-const { omit, pick } = require('lodash/fp');
+const { has, omit, pick } = require('lodash/fp');
 
 /**
  * Gets lifecycle service
@@ -31,15 +31,29 @@ module.exports = () => ({
             return omit(excludedFields, result);
           };
 
+          const checkPublicationState = (event) => {
+            if (event.result && has(event.result, 'publishedAt') && event.result.publishedAt === null) {
+              // Draft
+              return false;
+            } else {
+              // Published OR not enabled for content type
+              return true;
+            }
+          };
+
+          const noop = () => {};
+
           strapi.db.lifecycles.subscribe({
             models: [name],
 
             async afterCreate(event) {
-              provider.create({
-                indexName,
-                data: sanitize(event.result),
-                id: idPrefix + event.result.id,
-              });
+              checkPublicationState(event)
+                ? provider.create({
+                    indexName,
+                    data: sanitize(event.result),
+                    id: idPrefix + event.result.id,
+                  })
+                : noop();
             },
 
             // Todo: Fix `afterCreateMany` event result only has an count, it doesn't provide an array of result objects.
@@ -52,11 +66,13 @@ module.exports = () => ({
             // },
 
             async afterUpdate(event) {
-              provider.update({
-                indexName,
-                data: sanitize(event.result),
-                id: idPrefix + event.result.id,
-              });
+              checkPublicationState(event)
+                ? provider.update({
+                    indexName,
+                    data: sanitize(event.result),
+                    id: idPrefix + event.result.id,
+                  })
+                : provider.delete({ indexName, id: idPrefix + event.result.id });
             },
 
             // Todo: Fix `afterUpdateMany` event result only has an count, it doesn't provide an array of result objects.
