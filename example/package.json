@@ -14,7 +14,7 @@
     "@strapi/plugin-i18n": "4.0.6",
     "@strapi/plugin-users-permissions": "4.0.6",
     "@strapi/strapi": "4.0.6",
-    "sqlite3": "5.0.2"
+    "sqlite3": "5.1.4"
   },
   "author": {
     "name": "Mattias van den Belt",
