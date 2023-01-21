@@ -18,13 +18,13 @@ module.exports = () => ({
     // Loop over configured contentTypes in ./config/plugins.js
     contentTypes &&
       contentTypes.forEach((contentType) => {
-        const { name, index, prefix: idPrefix = '', fields = [], populate = [] } = contentType;
+        const { name, index, prefix: idPrefix = '', fields = [], populate = null } = contentType;
 
         if (strapi.contentTypes[name]) {
           const indexName = indexPrefix + (index ? index : name);
 
           const sanitize = async (result) => {
-            if (populate.length) {
+            if (populate) {
               result = await strapi.entityService.findOne(name, result.id, {
                 populate
               })
