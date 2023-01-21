@@ -18,12 +18,18 @@ module.exports = () => ({
     // Loop over configured contentTypes in ./config/plugins.js
     contentTypes &&
       contentTypes.forEach((contentType) => {
-        const { name, index, prefix: idPrefix = '', fields = [] } = contentType;
+        const { name, index, prefix: idPrefix = '', fields = [], populate = [] } = contentType;
 
         if (strapi.contentTypes[name]) {
           const indexName = indexPrefix + (index ? index : name);
 
-          const sanitize = (result) => {
+          const sanitize = async (result) => {
+            if (populate.length) {
+              result = await strapi.entityService.findOne(name, result.id, {
+                populate
+              })
+            }
+            
             if (fields.length > 0) {
               return pick(fields, result);
             }
@@ -37,7 +43,7 @@ module.exports = () => ({
             async afterCreate(event) {
               provider.create({
                 indexName,
-                data: sanitize(event.result),
+                data: await sanitize(event.result),
                 id: idPrefix + event.result.id,
               });
             },
@@ -54,7 +60,7 @@ module.exports = () => ({
             async afterUpdate(event) {
               provider.update({
                 indexName,
-                data: sanitize(event.result),
+                data: await sanitize(event.result),
                 id: idPrefix + event.result.id,
               });
             },
